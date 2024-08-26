@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://media.istockphoto.com/id/1709314196/photo/yes-and-no.jpg?s=2048x2048&w=is&k=20&c=WWqYIUSrWi7jMQ5oObkyniOWGCHAiCBD7iTa_Bmh9MM=">
+    <title>Тест на знание компьютерной грамотности</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="registration-block">
+            <h1>Регистрация</h1>
+            <form id="registrationForm">
+                <label for="firstName" class="form-label">Имя:</label>
+                <input type="text" id="firstName" required><br>
+                <label for="lastName" class="form-label">Фамилия:</label>
+                <input type="text" id="lastName" required><br>
+                <label for="middleName" class="form-label">Отчество:</label>
+                <input type="text" id="middleName" required><br>
+                <label for="dob" class="form-label">Дата рождения:</label>
+                <input type="date" id="dob" required><br>
+                <button type="button" onclick="submitRegistration()">Начать тест</button>
+            </form>
+        </div>
+        
+        <div class="circle circle-one"></div>
+        <div class="circle circle-two"></div>
+        <div class="circle circle-three"></div>
+
+        <!-- Тест -->
+        <div id="testSection" style="display: none;">
+            <h1>Тест на знание компьютерной грамотности</h1>
+
+            <!-- Вопросы по компьютерной грамотности -->
+            <!-- Пример вопроса -->
+            <div class="question">
+                <p>1. Что такое HTML?</p>
+                <label><input type="radio" name="q1" value="0"> Программный язык</label><br>
+                <label><input type="radio" name="q1" value="1"> Язык разметки</label><br>
+                <label><input type="radio" name="q1" value="0"> База данных</label><br>
+            </div>
+            <!-- Другие вопросы -->
+            <!-- Вопрос 2 -->
+            <div class="question">
+                <p>2. Что такое CSS?</p>
+                <label><input type="radio" name="q2" value="0"> Система управления контентом</label><br>
+                <label><input type="radio" name="q2" value="1"> Язык стилей</label><br>
+                <label><input type="radio" name="q2" value="0"> Операционная система</label><br>
+            </div>
+            <div class="question">
+                <p>1. Что такое HTML?</p>
+                <label><input type="radio" name="q1" value="0"> Программный язык</label><br>
+                <label><input type="radio" name="q1" value="1"> Язык разметки</label><br>
+                <label><input type="radio" name="q1" value="0"> База данных</label><br>
+            </div>
+            <div class="question">
+                <p>2. Что такое CSS?</p>
+                <label><input type="radio" name="q2" value="0"> Система управления контентом</label><br>
+                <label><input type="radio" name="q2" value="1"> Язык стилей</label><br>
+                <label><input type="radio" name="q2" value="0"> Операционная система</label><br>
+            </div>
+            <div class="question">
+                <p>3. Что делает функция в JavaScript?</p>
+                <label><input type="radio" name="q3" value="0"> Хранит данные</label><br>
+                <label><input type="radio" name="q3" value="1"> Выполняет действия</label><br>
+                <label><input type="radio" name="q3" value="0"> Форматирует текст</label><br>
+            </div>
+
+            <!-- Дополнительные вопросы -->
+            <div class="question">
+                <p>4. Текстовый редактор – это:</p>
+                <label><input type="radio" name="q4" value="1"> прикладное программное обеспечение, используемое для создания текстовых документов и работы с ними;</label><br>
+                <label><input type="radio" name="q4" value="0"> прикладное программное обеспечение, используемое для создания таблиц и работы с ними;</label><br>
+                <label><input type="radio" name="q4" value="0"> прикладное программное обеспечение, используемое для автоматизации задач бухгалтерского учета.</label><br>
+            </div>
+            <div class="question">
+                <p>5. Основными функциями текстовых редакторов являются:</p>
+                <label><input type="radio" name="q5" value="0"> создание таблиц и выполнение расчетов по ним;</label><br>
+                <label><input type="radio" name="q5" value="1"> редактирование текста, форматирование текста, вывод текста на печать;</label><br>
+                <label><input type="radio" name="q5" value="0"> разработка графических приложений.</label><br>
+            </div>
+            <div class="question">
+                <p>6. Основными функциями форматирования текста являются:</p>
+                <label><input type="radio" name="q6" value="0"> ввод текста, корректировка текста;</label><br>
+                <label><input type="radio" name="q6" value="1"> установление значений полей страницы, форматирование абзацев, установка шрифтов, структурирование и многоколонный набор;</label><br>
+                <label><input type="radio" name="q6" value="0"> перенос, копирование, переименование, удаление.</label><br>
+            </div>
+            <div class="question">
+                <p>7. Основными функциями редактирования текста являются:</p>
+                <label><input type="radio" name="q7" value="0"> выделение фрагментов текста;</label><br>
+                <label><input type="radio" name="q7" value="0"> установка межстрочных интервалов;</label><br>
+                <label><input type="radio" name="q7" value="1"> ввод текста, коррекция, вставка, удаление, копирование, перемещение.</label><br>
+            </div>
+            <div class="question">
+                <p>8. Строка меню текстового процессора содержит:</p>
+                <label><input type="radio" name="q8" value="0"> имена команд для работы с окнами;</label><br>
+                <label><input type="radio" name="q8" value="0"> панели инструментов с заданными командами;</label><br>
+                <label><input type="radio" name="q8" value="1"> имена групп команд по функциональному признаку.</label><br>
+            </div>
+            <div class="question">
+                <p>9. Строка состояния содержит:</p>
+                <label><input type="radio" name="q9" value="0"> имена включенных панелей инструментов;</label><br>
+                <label><input type="radio" name="q9" value="1"> имена редактируемых документов и текущее положение курсора;</label><br>
+                <label><input type="radio" name="q9" value="0"> объем оперативной памяти, занимаемый редактируемым документом.</label><br>
+            </div>
+            <div class="question">
+                <p>10. Рабочее поле – это:</p>
+                <label><input type="radio" name="q10" value="1"> пространство на экране дисплея для создания документа и работы с ним;</label><br>
+                <label><input type="radio" name="q10" value="0"> часть окна на экране дисплея, предназначенная для вставки объектов;</label><br>
+                <label><input type="radio" name="q10" value="0"> пространство на экране дисплея для создания рисунков и диаграмм пользователя.</label><br>
+            </div>
+            <div class="question">
+                <p>11. Линейки прокрутки выводятся в рабочее поле окна, если:</p>
+                <label><input type="radio" name="q11" value="0"> режим вывода объекта в рабочее поле в виде крупных значков;</label><br>
+                <label><input type="radio" name="q11" value="0"> режим вывода объекта в рабочее поле в виде мелких значков;</label><br>
+                <label><input type="radio" name="q11" value="1"> выводимый объект не помещается в рабочее поле окна.</label><br>
+            </div>
+            <div class="question">
+                <p>12. Вырезанный фрагмент текста помещается в:</p>
+                <label><input type="radio" name="q12" value="1"> буфер обмена данными;</label><br>
+                <label><input type="radio" name="q12" value="0"> корзину;</label><br>
+                <label><input type="radio" name="q12" value="0"> специальный файл данных.</label><br>
+            </div>
+            <div class="question">
+                <p>13. Нажатие клавиш Page Up и Page Down перемещает текст на:</p>
+                <label><input type="radio" name="q13" value="0"> один абзац;</label><br>
+                <label><input type="radio" name="q13" value="0"> одну строку;</label><br>
+                <label><input type="radio" name="q13" value="1"> одну страницу.</label><br>
+            </div>
+            <div class="question">
+                <p>14. Какой файловой системы не существует?</p>
+                <label><input type="radio" name="q14" value="0"> NTFS</label><br>
+                <label><input type="radio" name="q14" value="0"> EXT4</label><br>
+                <label><input type="radio" name="q14" value="0"> HFS+</label><br>
+                <label><input type="radio" name="q14" value="1"> FATX</label><br>
+            </div>
+            <div class="question">
+                <p>15. Какой компонент компьютера отвечает за обработку данных?</p>
+                <label><input type="radio" name="q15" value="1"> Процессор</label><br>
+                <label><input type="radio" name="q15" value="0"> Жесткий диск</label><br>
+                <label><input type="radio" name="q15" value="0"> Оперативная память</label><br>
+            </div>
+            <div class="question">
+                <p>16. Какой вид вирусов распространяется через электронную почту?</p>
+                <label><input type="radio" name="q16" value="1"> Вирус-письмо</label><br>
+                <label><input type="radio" name="q16" value="0"> Вирус-черепаха</label><br>
+                <label><input type="radio" name="q16" value="0"> Вирус-сканер</label><br>
+            </div>
+            <div class="question">
+                <p>17. Какое расширение у текстового файла?</p>
+                <label><input type="radio" name="q17" value="0"> .exe</label><br>
+                <label><input type="radio" name="q17" value="1"> .txt</label><br>
+                <label><input type="radio" name="q17" value="0"> .mp3</label><br>
+            </div>
+            <div class="question">
+                <p>18. Какой из следующих компонентов отвечает за вывод изображения на экран?</p>
+                <label><input type="radio" name="q18" value="1"> Видеокарта</label><br>
+                <label><input type="radio" name="q18" value="0"> Процессор</label><br>
+                <label><input type="radio" name="q18" value="0"> Оперативная память</label><br>
+            </div>
+
+            <!-- Продолжайте добавлять вопросы аналогично -->
+
+            <button onclick="checkAnswers()">Проверить ответы</button>
+            <button onclick="resetTest()">Перепройти</button>
+
+            <div id="result"></div>
+            <div id="userInfo"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

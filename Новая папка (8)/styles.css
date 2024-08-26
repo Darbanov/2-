@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #000; /* Черный фон для всего body */
+    position: relative;
+    overflow: auto; /* Разрешить прокрутку */
+}
+
+.container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    min-height: 100vh; /* Гарантирует, что контейнер занимает хотя бы всю высоту окна */
+}
+
+.registration-block {
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.registration-block h1 {
+    text-align: center;
+}
+
+.registration-block .form-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #1e90ff; /* Синий цвет для надписей */
+    font-size: 18px;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Плавный переход */
+}
+
+.registration-block .form-label:hover {
+    color: #00bfff; /* Неоновый синий цвет при наведении */
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff; /* Неоновый эффект */
+}
+
+.registration-block input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.registration-block button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+}
+
+.registration-block button:hover {
+    background-color: #0056b3;
+}
+
+/* Декоративные элементы */
+.container::before,
+.container::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1; /* Поместить под основным содержимым */
+}
+
+.container::before {
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    left: -150px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.container::after {
+    width: 500px;
+    height: 500px;
+    bottom: -250px;
+    right: -250px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Основные стили для секции теста */
+#testSection {
+    position: relative;
+    margin-top: 20px;
+    padding: 20px;
+    color: #f5f5f5; /* Светло-белый цвет для текста теста */
+    background: #333; /* Темный фон для секции теста */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Декорации для фона */
+#testSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('path-to-your-background-image.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.2; /* Полупрозрачный фоновый слой */
+    z-index: -1;
+}
+
+#testSection::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
+    z-index: -1;
+}
+
+/* Декорации для вопросов и ответов */
+.question {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #555; /* Тонкая граница вокруг вопроса */
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон для вопросов */
+}
+
+.question p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.question label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #f5f5f5; /* Светло-белый цвет для результата */
+}
+
+#userInfo {
+    margin-top: 20px;
+    color: #fff;
+}
+
+/* Анимация */
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    animation: move 2s infinite alternate;
+}
+
+.circle-one {
+    width: 150px;
+    height: 150px;
+    top: 20px;
+    left: 20px;
+}
+
+.circle-two {
+    width: 200px;
+    height: 200px;
+    top: 100px;
+    right: 100px;
+}
+
+.circle-three {
+    width: 250px;
+    height: 250px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
